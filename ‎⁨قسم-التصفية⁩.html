@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>قسم التصفية - معهد التدريب النفطي كركوك</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--o:#F26A1B;--od:#C2500D;--ol:#FFF1E6;--bg:#FFFFFF;--tx:#2B2622;--mu:#6B625B;--ln:#F4D3BC;--cd:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1B1613;--cd:#241B16;--tx:#F5EDE7;--mu:#B8ABA1;--ol:#2A1E16;--ln:#4A3325}}
+:root[data-theme="dark"]{--bg:#1B1613;--cd:#241B16;--tx:#F5EDE7;--mu:#B8ABA1;--ol:#2A1E16;--ln:#4A3325}
+*{box-sizing:border-box}
+html{height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--tx);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.9;font-size:16px}
+.w{max-width:1100px;margin:0 auto;padding:0 16px}
+header{background:#fff;border-bottom:6px solid var(--o);padding:12px 0}
+header .w{display:flex;align-items:center;gap:16px}
+header img{width:80px;border-radius:6px;flex:none}
+header h1{margin:0;font-size:1.25rem;color:#2B2622;font-weight:800;line-height:1.5}
+header p{margin:0;color:#6B625B;font-size:.95rem}
+header p b{color:var(--od)}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--cd);border-bottom:1px solid var(--ln);box-shadow:0 2px 8px #0001}
+.tabs{display:flex;gap:4px;overflow-x:auto;max-width:100%;padding:6px 0}
+.tb{display:flex;align-items:center;gap:8px;flex:none;font:inherit;font-weight:700;font-size:.95rem;color:var(--tx);background:none;border:0;border-bottom:3px solid transparent;padding:8px 14px;cursor:pointer;border-radius:6px 6px 0 0}
+.tb svg{width:20px;height:20px;color:var(--o)}
+.tb.on{background:var(--ol);border-bottom-color:var(--o);color:var(--od)}
+.tb:hover{background:var(--ol)}
+.tb:focus-visible{outline:2px solid var(--o);outline-offset:2px}
+svg.i{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.grp{color:var(--mu);font-size:.9rem;margin:10px 4px 4px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.it{display:flex;align-items:center;gap:10px;text-align:right;font:inherit;font-size:.95rem;font-weight:600;line-height:1.5;color:var(--tx);background:transparent;border:0;border-inline-start:4px solid transparent;border-radius:6px;padding:8px 10px;cursor:pointer}
+.it i{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--ln);display:grid;place-items:center;flex:none;color:var(--o);font-style:normal;font-weight:800;font-size:.9rem}
+.it i svg{width:20px;height:20px}
+.it.on{background:var(--ol);border-inline-start-color:var(--o)}
+.it.on i{background:var(--o);border-color:var(--o);color:#fff}
+.it:hover{background:var(--ol)}
+.it:focus-visible,.go:focus-visible{outline:2px solid var(--o);outline-offset:2px}
+.pane[hidden]{display:none}
+.lab[hidden]{display:none}
+h3.t{display:flex;align-items:center;gap:12px;font-size:1.5rem;margin:0 0 14px;font-weight:800}
+h3.t svg{width:38px;height:38px;color:var(--o);flex:none}
+.panel{background:var(--ol);border-right:5px solid var(--o);border-radius:8px;padding:14px 22px}
+.panel ol{margin:0;padding-right:22px}
+.panel li::marker,.exp li::marker{color:var(--od);font-weight:800}
+.gos{display:grid;gap:8px;margin-top:14px}
+.go{display:flex;align-items:center;gap:12px;font:inherit;text-align:right;color:var(--tx);background:var(--bg);border:1.5px solid var(--ln);border-radius:10px;padding:8px 14px;cursor:pointer}
+.go:hover{border-color:var(--o)}
+.go b{background:var(--o);color:#fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;flex:none;font-size:.9rem}
+.exp{border:1.5px solid var(--ln);border-radius:14px;overflow:hidden}
+.exp>h4{margin:0;background:var(--o);color:#fff;padding:12px 18px;font-size:1.15rem;font-weight:800;display:flex;align-items:center;gap:12px;line-height:1.6}
+.exp>h4 svg{width:34px;height:34px;flex:none}
+.exp>h4 b{background:#fff;color:var(--od);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;flex:none}
+.exp .body{padding:6px 20px 18px}
+.exp h5{margin:14px 0 4px;color:var(--od);font-size:1.02rem;font-weight:800}
+.exp p,.exp ul,.exp ol{margin:0}
+.exp ul,.exp ol{padding-right:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0!important;list-style:none}
+.chips li{background:var(--ol);border:1px solid var(--ln);border-radius:99px;padding:0 14px;font-size:.93rem}
+.stage{margin-top:10px;border-right:3px solid var(--ln);padding-right:12px}
+.stage h6{margin:0 0 2px;color:var(--o);font-size:.95rem;font-weight:800}
+.steps{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.scard{background:var(--cd);border:1px solid var(--ln);border-radius:12px;padding:12px 16px}
+.shead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.shead h5{margin:0;font-size:1.02rem;font-weight:800;color:var(--tx)}
+.sbadge{flex:none;background:var(--o);color:#fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.sbd{margin-top:6px;color:var(--mu);font-size:.93rem}
+.sbd p{margin:0}
+.sbd ol{margin:0;padding-inline-start:20px}
+.sbd li{margin:3px 0}
+footer{border-top:1px solid var(--ln);color:var(--mu);text-align:center;padding:16px 12px;font-size:.9rem}
+.guide{display:flex;align-items:flex-start;gap:24px;margin:0 0 20px}
+.guide svg{width:104px;height:auto;flex:none;color:#2B2622}
+.bub{position:relative;background:var(--ol);border:2px solid var(--o);border-radius:16px;padding:12px 16px;margin-top:10px;font-weight:600;line-height:1.8;flex:1}
+.bub::after{content:"";position:absolute;right:-20px;top:26px;border:10px solid transparent;border-left-color:var(--o)}
+.bub.pop{animation:pop .35s ease-out}
+@keyframes pop{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.bub.pop{animation:none}}
+@media (max-width:520px){.guide{gap:20px}.guide svg{width:76px}.bub{font-size:.93rem;padding:10px 12px}header img{width:60px}header h1{font-size:1.05rem}}
+.layout{max-width:1100px;margin:0 auto;padding:18px 16px;display:grid;gap:22px;align-items:start}
+@media (min-width:820px){.layout{grid-template-columns:270px 1fr}aside{position:sticky;top:56px}.items{grid-template-columns:1fr!important}}
+.hero{margin:18px 0;border-radius:16px;background:linear-gradient(120deg,#E85D0C,#F26A1B 55%,#FF9A55);color:#fff;padding:26px 24px}
+.hero h2{margin:0;font-size:clamp(1.4rem,5vw,2rem);font-weight:800;line-height:1.5}
+.hero p{margin:6px 0 0;font-size:1.05rem}
+.deptcards{display:grid;gap:14px;margin-top:16px}
+@media (min-width:700px){.deptcards{grid-template-columns:repeat(3,1fr)}}
+.dcard{background:var(--bg);border:1.5px solid var(--ln);border-radius:14px;padding:18px;text-align:right;font:inherit;color:var(--tx);cursor:pointer;display:flex;flex-direction:column;gap:8px}
+.dcard:hover{border-color:var(--o);background:var(--ol)}
+.dcard .ic{width:44px;height:44px;border-radius:50%;background:var(--ol);display:grid;place-items:center;color:var(--o)}
+.dcard .ic svg{width:26px;height:26px}
+.dcard h4{margin:0;font-size:1.05rem;font-weight:800}
+.dcard span{color:var(--mu);font-size:.9rem}
+@media print{.topbar{display:none}.pane[hidden]{display:block}.exp{break-inside:avoid;margin-bottom:16px}.guide{display:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="flask" viewBox="0 0 64 64"><path d="M26 8h12M28 8v16L13 51a5 5 0 0 0 4.5 7h29a5 5 0 0 0 4.5-7L36 24V8M19 42h26"/></symbol>
+<symbol id="tube" viewBox="0 0 64 64"><path d="M24 8h16M26 8v42a6 6 0 0 0 12 0V8M26 32h12"/></symbol>
+<symbol id="beaker" viewBox="0 0 64 64"><path d="M16 10h32M19 10v41a4 4 0 0 0 4 4h18a4 4 0 0 0 4-4V10M19 28h26M19 40h10"/></symbol>
+<symbol id="scope" viewBox="0 0 64 64"><path d="M25 8l10-3 9 22-10 4zM31 30l4 9M18 56h30M22 56c0-9 7-17 18-17M40 39c6 3 8 9 8 17"/></symbol>
+<symbol id="shield" viewBox="0 0 64 64"><path d="M32 6l20 8v16c0 14-9 23-20 28C21 53 12 44 12 30V14zM23 32l7 7 12-14"/></symbol>
+<symbol id="gear" viewBox="0 0 64 64"><path d="M32 20a12 12 0 1 0 0 24 12 12 0 0 0 0-24z"/><path d="M32 6v8M32 50v8M6 32h8M50 32h8M13 13l6 6M45 45l6 6M51 13l-6 6M19 45l-6 6"/></symbol>
+<symbol id="home" viewBox="0 0 64 64"><path d="M8 30L32 10l24 20M14 26v26h36V26M26 52V38h12v14"/></symbol>
+<symbol id="info" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M32 28v16M32 19v2"/></symbol>
+<symbol id="search" viewBox="0 0 64 64"><circle cx="28" cy="28" r="16"/><path d="M40 40l16 16"/></symbol>
+<symbol id="play" viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M27 21l17 11-17 11z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="power" viewBox="0 0 64 64"><path d="M32 10v22"/><path d="M20 16a22 22 0 1 0 24 0"/></symbol>
+</svg>
+<header><div class="w"><img src="data:image/jpeg;base64,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" alt="شعار معهد التدريب النفطي كركوك"><div><h1>معهد التدريب النفطي كركوك</h1><p><b>قسم التصفية</b> - المختبرات والأدلة التدريبية</p></div></div></header>
+<div class="topbar"><div class="w"><div class="tabs" role="tablist" aria-label="أقسام الصفحة">
+<button class="tb on" data-lab="h"><svg class="i"><use href="#home"/></svg>قسم التصفية</button>
+<button class="tb" data-lab="u"><svg class="i"><use href="#gear"/></svg>مختبر وحدات التشغيلية</button>
+<button class="tb" data-lab="g"><svg class="i"><use href="#play"/></svg>مختبر وحدات الغاز</button>
+<button class="tb" data-lab="t"><svg class="i"><use href="#flask"/></svg>مختبر فحوصات الغاز</button>
+</div></div></div>
+
+<div class="lab" id="lab-h">
+<div class="w"><div class="hero"><h2>قسم التصفية</h2><p>معهد التدريب النفطي – كركوك</p></div></div>
+<div class="w" style="padding-bottom:28px">
+<div class="panel">
+<p style="margin:0">قسم التصفية هو أحد الأقسام الفنية في معهد التدريب النفطي بكركوك، ويُعنى بتدريب المتدربين على العمليات الصناعية لتصفية النفط ومعالجة الغاز، بدءاً من عمليات الفصل الأساسية في المختبر (التقطير، الامتصاص، الاستخلاص، الامتزاز)، مروراً بفحوصات الجودة القياسية لمنتجات الغاز، وصولاً إلى تشغيل وإيقاف الوحدات الصناعية الفعلية (الأمين، LPG، LNG) بحسب الإجراءات الآمنة المعتمدة. يجمع هذا الدليل الإلكتروني ثلاثة مراجع رئيسية للقسم في مكان واحد:</p>
+</div>
+<div class="deptcards">
+<button class="dcard" data-go-lab="u"><div class="ic"><svg class="i"><use href="#gear"/></svg></div><h4>مختبر وحدات التشغيلية</h4><span>4 أجهزة تدريبية: التقطير المستمر، الامتصاص والنزع، الاستخلاص، والامتزاز.</span></button>
+<button class="dcard" data-go-lab="g"><div class="ic"><svg class="i"><use href="#play"/></svg></div><h4>مختبر وحدات الغاز</h4><span>خطوات تشغيل وإيقاف آمنة لثلاث وحدات: الأمين، LPG، وLNG.</span></button>
+<button class="dcard" data-go-lab="t"><div class="ic"><svg class="i"><use href="#flask"/></svg></div><h4>مختبر فحوصات الغاز</h4><span>5 تجارب فحص لخصائص الغاز السائل وجودته.</span></button>
+</div>
+</div>
+</div>
+
+<div class="lab" id="lab-u" hidden>
+<div class="layout">
+<aside aria-label="التنقل"><div class="grp">عام</div><div class="items"><button class="it on" data-t="u-p-overview"><i><svg class="i"><use href="#scope"></use></svg></i>نظرة عامة</button><button class="it" data-t="u-p-goals"><i><svg class="i"><use href="#gear"></use></svg></i>أهداف المختبر</button><button class="it" data-t="u-safety"><i><svg class="i"><use href="#shield"></use></svg></i>تعليمات السلامة</button></div><div class="grp">الأجهزة</div><div class="items"><button class="it" data-t="u-e1"><i>1</i>جهاز التقطير المستمر</button><button class="it" data-t="u-e2"><i>2</i>جهاز الامتصاص والنزع</button><button class="it" data-t="u-e3"><i>3</i>جهاز الاستخلاص</button><button class="it" data-t="u-e4"><i>4</i>جهاز الامتزاز</button></div></aside>
+<main id="main-u" style="scroll-margin-top:56px">
+<div class="guide"><svg class="i" viewBox="0 0 120 140" role="img" aria-label="الفاحص يشرح"><path d="M14 140v-28q0-26 46-26t46 26v28z" fill="#fff" stroke="currentColor"/><path d="M48 88l12 20 12-20" fill="#F26A1B" stroke="currentColor"/><circle cx="60" cy="52" r="24" fill="#F2C9A0" stroke="currentColor"/><path d="M33 47q0-28 27-28t27 28z" fill="#F26A1B" stroke="currentColor"/><rect x="27" y="45" width="66" height="8" rx="4" fill="#F26A1B" stroke="currentColor"/><rect x="39" y="54" width="42" height="14" rx="7" fill="#DFF3FF" stroke="currentColor"/><circle cx="51" cy="61" r="2" fill="currentColor"/><circle cx="69" cy="61" r="2" fill="currentColor"/><path d="M52 76q8 6 16 0" stroke-width="2.5"/><circle cx="88" cy="112" r="6" fill="#F2C9A0" stroke="currentColor" stroke-width="2.5"/><use href="#gear" x="72" y="80" width="42" height="42" fill="#F26A1B" fill-opacity=".4" stroke-width="3.5"/></svg><div class="bub pop" id="say-u" aria-live="polite"></div></div>
+<section class="pane" id="u-p-overview"><h3 class="t"><svg class="i"><use href="#scope"></use></svg>نظرة عامة</h3>
+<div class="panel"><p style="margin:0">مختبر وحدات التشغيلية في قسم التصفية بمعهد التدريب النفطي / كركوك. يضم أربعة أجهزة تدريبية تحاكي وحدات المعامل: التقطير المستمر، الامتصاص والنزع، الاستخلاص، والامتزاز. اختر قسماً من القائمة، أو ابدأ بأحد الأجهزة:</p></div>
+<div class="gos"><button class="go" data-t="u-e1"><b>1</b>جهاز التقطير المستمر</button><button class="go" data-t="u-e2"><b>2</b>جهاز الامتصاص والنزع</button><button class="go" data-t="u-e3"><b>3</b>جهاز الاستخلاص</button><button class="go" data-t="u-e4"><b>4</b>جهاز الامتزاز</button></div></section>
+<section class="pane" hidden="" id="u-p-goals"><h3 class="t"><svg class="i"><use href="#gear"></use></svg>أهداف المختبر</h3>
+<div class="panel"><ol>
+<li>فصل مزيج سائل إلى مكوناته باختلاف درجات الغليان عن طريق جهاز التقطير المستمر.</li>
+<li>دراسة الامتصاص والنزع للغازات، وقياس فرق الضغط في الظروف التشغيلية.</li>
+<li>فصل مكون سائل عن مزيج باستخدام مذيب انتقائي عن طريق جهاز الاستخلاص.</li>
+<li>فصل غاز ثنائي أوكسيد الكربون عن الهواء باستعمال الكربون الفعال عن طريق جهاز الامتزاز.</li>
+<li>التدريب العملي على تهيئة وتشغيل وإيقاف الأجهزة الصناعية بشكل آمن ومتسلسل.</li>
+</ol></div></section>
+<section class="pane" hidden="" id="u-safety"><h3 class="t"><svg class="i"><use href="#shield"></use></svg>تعليمات السلامة</h3>
+<div class="panel"><ol>
+<li>ممنوع تشغيل أي جهاز إلا بحضور المشرف واتباع تسلسل خطوات التهيئة والتشغيل بدقة.</li>
+<li>تأكد من ضبط منظم الضغط على القيمة المحددة قبل بدء التشغيل.</li>
+<li>راقب المؤشرات الحرارية وفرق الضغط باستمرار أثناء التشغيل.</li>
+<li>عند الإيقاف، اتبع تسلسل الإطفاء بالعكس (المسخنة ثم المضخة ثم تحويل الجهاز لليدوي) لتفادي أي عطل.</li>
+<li>حافظ على نظافة وترتيب محيط الجهاز، وأغلق الهواء المضغوط بعد الانتهاء.</li>
+</ol></div></section>
+<article class="exp pane" hidden="" id="u-e1">
+<h4><b>1</b>جهاز التقطير المستمر<svg class="i" style="margin-inline-start:auto"><use href="#flask"></use></svg></h4>
+<div class="body">
+<h5>الهدف من الجهاز</h5><p>فصل مزيج سائل إلى مكوناته باختلاف درجات الغليان.</p>
+<h5>مكونات الجهاز</h5>
+<ul class="chips"><li>مسخنة سفلية مصنوعة من الزجاج</li><li>مسخنة كهربائية</li><li>برج تقطير فيه سبع صواني من نوع الأكواب المقلوبة</li><li>خزان التغذية</li><li>خزان تجميع الناتج العلوي</li><li>خزان تجميع الناتج السفلي</li><li>مبادلات حرارية من نوع Double Pipe</li><li>مضخة مكبسية</li><li>مضخة ذات صفائح دوارة</li><li>مؤشرات حرارية (6)</li><li>مؤشرات حرارية إلكترونية</li><li>صمام كهربائي للراجع</li><li>مكثفة من نوع الملف</li><li>Timer (عدد 2) للسيطرة على الراجع</li><li>مقياس ضغط فراغي</li><li>مقياس إلكتروني للجريان (20–250 لتر/ساعة)</li><li>محولات إشارة</li><li>معالج PID دقيق</li><li>صمام هوائي للضغط والجريان</li></ul>
+<div class="stage"><h6>تهيئة الجهاز</h6><p style="margin:2px 0 4px;color:var(--mu);font-size:.9rem">بحالة أوتوماتيكية تحت الضغط الجوي</p><ol><li>منظم الضغط يكون على 1.5 bar.</li><li>الصمام الجانبي مغلق، أي V6.</li><li>صمامات الضغط الجوي مفتوحة وصمامات التصريف مغلقة.</li></ol></div><div class="stage"><h6>تشغيل الجهاز</h6><p style="margin:2px 0 4px;color:var(--mu);font-size:.9rem">بحالة أوتوماتيكية تحت الضغط الجوي</p><ol><li>وضع نقطة التحديد وفتحة الصمام في الحلقة الأولى حسب العدد المعطى بالسؤال.</li><li>وضع فتحة الصمام في الحلقة الثالثة حسب العدد المعطى بالسؤال.</li><li>وضع فتحة الصمام في الحلقة الرابعة حسب العدد المعطى بالسؤال.</li><li>تشغيل المضخة G1 ثم المسخنة J1.</li><li>انتظار وصول Ti4 إلى 76°C ثم فتح صمام الراجع.</li></ol></div><div class="stage"><h6>إيقاف الجهاز</h6><p style="margin:2px 0 4px;color:var(--mu);font-size:.9rem">بحالة أوتوماتيكية تحت الضغط الجوي</p><ol><li>إطفاء المسخنة، ثم المضخة، ثم تحويل الجهاز إلى الحالة اليدوية.</li></ol></div>
+</div></article>
+<article class="exp pane" hidden="" id="u-e2">
+<h4><b>2</b>جهاز الامتصاص والنزع<svg class="i" style="margin-inline-start:auto"><use href="#tube"></use></svg></h4>
+<div class="body">
+<h5>الهدف من الجهاز</h5><ol><li>تحديد انخفاض فرق الضغط في الظروف التشغيلية.</li><li>اختبار تعرية الأمونيا من محلول هيدروكسيد الأمونيوم.</li></ol>
+<h5>مكونات الجهاز</h5>
+<ul class="chips"><li>خزان سعته 50L رمزه D1</li><li>برج مصنوع من زجاج مع حشوات من نوع Raschig Ring بقطر 8mm</li><li>مبادل حراري أسفل البرج مصنوع من زجاج</li><li>مضخة من حديد مقاوم للصدأ مع خانق هواء (0–270 لتر/ساعة)</li><li>مرسلة ضغط إلكترونية (0–200 mmH₂O)</li><li>مؤشر فرق ضغط (0–200 mmWc)</li><li>مقياس غاز الأمونيا (0–600 NI/hr) رمزه FT2</li><li>مقياس الهواء (0–6000 NI/hr) رمزه FT1</li><li>صمامات سيطرة للهواء FV1 وللأمونيا FV2</li><li>مؤشرات حرارة (عدد 3)</li><li>معالج PID دقيق</li></ul>
+<div class="stage"><h6>تهيئة الجهاز</h6><ol><li>التأكد من وجود كهرباء.</li><li>التأكد من وجود مذيب في الخزان.</li><li>التأكد من وجود خليط الغاز.</li><li>منظم الضغط على 1.4 bar.</li></ol></div><div class="stage"><h6>تشغيل الجهاز</h6><ol><li>تحديد نقطة التحديد وفتحة الصمام في الحلقة الأولى (السيطرة على الهواء) حسب المعطى بالسؤال.</li><li>تحديد نقطة التحديد وفتحة الصمام في الحلقة الثانية (السيطرة على غاز الأمونيا) حسب المعطى بالسؤال.</li><li>الحلقة الثالثة بحالتين: عند فرق الضغط، تحديد نقطة التحديد وفتحة الصمام ووضع أوتوماتيكي؛ وعند معدل الجريان، تحديد فتحة الصمام فقط.</li><li>تشغيل المضخة G1.</li></ol></div><div class="stage"><h6>إيقاف الجهاز</h6><ol><li>غلق صمام FV1 ثم FV2، وتصغير فتحة الصمام للحلقات الأولى والثانية والثالثة.</li><li>تصفير معدل الجريان للحلقات ثم إيقاف المضخة.</li><li>تفريغ سوائل البرج ثم غلق الهواء المضغوط.</li></ol></div>
+</div></article>
+<article class="exp pane" hidden="" id="u-e3">
+<h4><b>3</b>جهاز الاستخلاص<svg class="i" style="margin-inline-start:auto"><use href="#beaker"></use></svg></h4>
+<div class="body">
+<h5>الهدف من الجهاز</h5><p>فصل الحامض عن مزيج سائل بمعاملته كمذيب.</p>
+<h5>مكونات الجهاز</h5>
+<ul class="chips"><li>برج استخلاص وخلاط مع 26 قرص</li><li>محرك كهربائي</li><li>عازلة سفلية</li><li>عازلة علوية</li><li>خزان للطور الثقيل D1</li><li>خزان للطور الخفيف D2</li><li>خزان تجميع للرافينات والإكستراكت</li><li>مضخة ترددية ذات جسم مزدوج مع خانق هوائي</li><li>مؤشرات حرارة إلكترونية (عدد 3)</li><li>مرسلة فرق ضغط LT</li><li>صمام سيطرة هوائي للمستوى LV</li><li>محولات إشارة (عدد 3)</li><li>معالج PID دقيق</li></ul>
+<div class="stage"><h6>تهيئة الجهاز</h6><ol><li>التأكد من الكهرباء.</li><li>منظم ضغط الصمامات على 1.4 bar وللخانق 6 bar.</li><li>التأكد من وجود مادة مغذية.</li></ol></div><div class="stage"><h6>تشغيل الجهاز</h6><ol><li>تحديد نقطة التحديد في الحلقة الأولى حسب السؤال.</li><li>تحديد نقطة التحديد في الحلقة الثانية حسب السؤال.</li><li>تحديد نقطة التحديد على 60% في الحلقة الثالثة للمذيب.</li><li>تحديد نقطة التحديد على 40% في الحلقة الرابعة للمزيج.</li><li>إذا كان يوجد سائل بالبرج: تشغيل الخلاط ثم المضخة؛ وإذا لا يوجد: تشغيل المضخة ثم الخلاط.</li><li>الحلقتان الأولى والثانية على وضع أوتوماتيكي.</li></ol></div><div class="stage"><h6>إيقاف الجهاز</h6><ol><li>وضع الحلقتين الأولى والثانية على اليدوي.</li><li>إيقاف المضخة ثم الخلاط.</li><li>تصفير فتحة الصمام للحلقة الأولى.</li></ol></div>
+</div></article>
+<article class="exp pane" hidden="" id="u-e4">
+<h4><b>4</b>جهاز الامتزاز<svg class="i" style="margin-inline-start:auto"><use href="#scope"></use></svg></h4>
+<div class="body">
+<h5>الهدف من الجهاز</h5><p>فصل غاز ثنائي أوكسيد الكربون عن الهواء باستعمال الكربون الفعال.</p>
+<h5>مكونات الجهاز</h5>
+<ul class="chips"><li>كابسة</li><li>فلاتر (عدد 2)</li><li>مبادلة ثالثة تحتوي كربون فعال من نوع الملف</li><li>مبادلة ثانية من نوع الملف تعمل كمكثفة</li><li>مبادلة أولى من نوع الملف تعمل كمبردة</li><li>وعاء تجميع (عدد 2)</li><li>متحسسات حرارية (عدد 8)</li><li>مقياس الهواء FM1 (عدد 2)</li><li>مقياس ثنائي أوكسيد الكربون FM2</li><li>صمامات أمان (عدد 3)</li></ul>
+</div></article>
+</main>
+</div>
+</div>
+
+<div class="lab" id="lab-g" hidden>
+<div class="layout">
+<aside aria-label="التنقل">
+<div class="grp">عام</div>
+<div class="items"><button class="it on" data-t="g-p-overview"><i><svg class="i"><use href="#scope"></use></svg></i>نظرة عامة</button></div>
+<div class="grp">وحدة الأمين</div>
+<div class="items">
+<button class="it" data-t="g-amine-goal"><i><svg class="i"><use href="#info"></use></svg></i>الهدف والفائدة</button>
+<button class="it" data-t="g-amine-start"><i><svg class="i"><use href="#play"></use></svg></i>خطوات التشغيل</button>
+<button class="it" data-t="g-amine-stop"><i><svg class="i"><use href="#power"></use></svg></i>خطوات الإيقاف</button>
+</div>
+<div class="grp">وحدة LPG</div>
+<div class="items">
+<button class="it" data-t="g-lpg-goal"><i><svg class="i"><use href="#info"></use></svg></i>الهدف والفائدة</button>
+<button class="it" data-t="g-lpg-start"><i><svg class="i"><use href="#play"></use></svg></i>خطوات التشغيل</button>
+<button class="it" data-t="g-lpg-stop"><i><svg class="i"><use href="#power"></use></svg></i>خطوات الإيقاف</button>
+</div>
+<div class="grp">وحدة LNG</div>
+<div class="items">
+<button class="it" data-t="g-lng-goal"><i><svg class="i"><use href="#info"></use></svg></i>الهدف والفائدة</button>
+<button class="it" data-t="g-lng-start"><i><svg class="i"><use href="#play"></use></svg></i>خطوات التشغيل</button>
+<button class="it" data-t="g-lng-stop"><i><svg class="i"><use href="#power"></use></svg></i>خطوات الإيقاف</button>
+</div>
+</aside>
+<main id="main-g" style="scroll-margin-top:56px">
+<div class="guide"><svg class="i" viewBox="0 0 120 140" role="img" aria-label="المشرف يشرح"><path d="M14 140v-28q0-26 46-26t46 26v28z" fill="#fff" stroke="currentColor"/><path d="M48 88l12 20 12-20" fill="#F26A1B" stroke="currentColor"/><circle cx="60" cy="52" r="24" fill="#F2C9A0" stroke="currentColor"/><path d="M33 47q0-28 27-28t27 28z" fill="#F26A1B" stroke="currentColor"/><rect x="27" y="45" width="66" height="8" rx="4" fill="#F26A1B" stroke="currentColor"/><rect x="39" y="54" width="42" height="14" rx="7" fill="#DFF3FF" stroke="currentColor"/><circle cx="51" cy="61" r="2" fill="currentColor"/><circle cx="69" cy="61" r="2" fill="currentColor"/><path d="M52 76q8 6 16 0" stroke-width="2.5"/><circle cx="88" cy="112" r="6" fill="#F2C9A0" stroke="currentColor" stroke-width="2.5"/><use href="#gear" x="72" y="80" width="42" height="42" fill="#F26A1B" fill-opacity=".4" stroke-width="3.5"/></svg><div class="bub pop" id="say-g" aria-live="polite"></div></div>
+<section class="pane" id="g-p-overview"><h3 class="t"><svg class="i"><use href="#scope"></use></svg>نظرة عامة</h3>
+<div class="panel"><p style="margin:0">هذا الدليل يجمع الهدف وخطوات التشغيل والإيقاف الآمنة لثلاث وحدات رئيسية: وحدة الأمين، ووحدة الغاز المسال LPG، ووحدة الغاز الطبيعي المسال LNG. اختر وحدة من القائمة لعرض تفاصيلها، أو ابدأ مباشرة من إحدى وحدات التشغيل:</p></div>
+<div class="gos"><button class="go" data-t="g-amine-start"><b>1</b>تشغيل وحدة الأمين</button><button class="go" data-t="g-lpg-start"><b>2</b>تشغيل وحدة LPG</button><button class="go" data-t="g-lng-start"><b>3</b>تشغيل وحدة LNG</button></div></section>
+<section class="pane" hidden="" id="g-amine-goal"><h3 class="t"><svg class="i"><use href="#info"></use></svg>وحدة الأمين – الهدف والفائدة</h3>
+<div class="panel"><p style="margin:0">تهدف وحدة الأمين إلى إزالة الغازات الحامضية، وأهمها كبريتيد الهيدروجين (H₂S) وثاني أكسيد الكربون (CO₂)، من غاز العملية. تتم هذه الإزالة بامتصاص الغازات الحامضية داخل برج الامتصاص بواسطة محلول الأمين، ثم تجديد المحلول في برج إعادة التنشيط بالتسخين لنزع هذه الغازات منه وإعادة استخدامه من جديد. فائدة الوحدة أنها تحمي الأنابيب والمعدات من التآكل، وتجعل الغاز مطابقاً للمواصفات القياسية المطلوبة، وتهيئه بشكل آمن للمراحل اللاحقة من المعالجة.</p></div></section>
+<article class="exp pane" hidden="" id="g-amine-start"><h4><svg class="i" style="width:32px;height:32px"><use href="#play"></use></svg>خطوات تشغيل وحدة الأمين</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل نظام SIS إلى اللون الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>التحقق من معدل التغذية</h5><span class="sbadge">2</span></div><div class="sbd"><p>التأكد من أن معدل جريان مادة المغذية أقل من 30 tn/hr.</p></div></div><div class="scard"><div class="shead"><h5>التحقق من إغلاق الصمامات</h5><span class="sbadge">3</span></div><div class="sbd"><p>التأكد من إغلاق جميع صمامات SDV وBDV في جميع الشاشات.</p></div></div><div class="scard"><div class="shead"><h5>ضبط المسيطرات يدوياً</h5><span class="sbadge">4</span></div><div class="sbd"><ol><li>مسيطرات المستوى والجريان: Manual وفتحة 0%.</li><li>مسيطرات الضغط تبقى أوتوماتيكية للأمان.</li></ol></div></div><div class="scard"><div class="shead"><h5>فتح SDV9 وضبط FIC4</h5><span class="sbadge">5</span></div><div class="sbd"><p>فتح SDV9، ووضع FIC4 أوتوماتيك بمعدل 20 tn/hr.</p></div></div><div class="scard"><div class="shead"><h5>تحويل FIC4 عند 60%</h5><span class="sbadge">6</span></div><div class="sbd"><p>عند وصول مستوى Amin Flash Tank إلى 60%، تحويل FIC4 إلى Manual وفتحة 0%.</p></div></div><div class="scard"><div class="shead"><h5>فتح SDV7 وضبط LIC5</h5><span class="sbadge">7</span></div><div class="sbd"><p>فتح SDV7، ووضع LIC5 Manual وفتحة 0% ونقطة تحديد 20 tn/hr.</p></div></div><div class="scard"><div class="shead"><h5>تشغيل LIC5 أوتوماتيكياً</h5><span class="sbadge">8</span></div><div class="sbd"><p>وضع LIC5 أوتوماتيك وفتحة الصمام 50%.</p></div></div><div class="scard"><div class="shead"><h5>تشغيل مضخة FIC7</h5><span class="sbadge">9</span></div><div class="sbd"><p>FIC7 Manual وفتحة 0%، فتح SDV10 وتشغيل المضخة، ثم FIC7 أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>فتح SDV8 وMV1 وSDV2</h5><span class="sbadge">10</span></div><div class="sbd"><ol><li>فتح SDV8، FIC3 أوتوماتيك بنقطة 10 tn/hr.</li><li>فتح bypass MV1 ثم SDV2.</li></ol></div></div><div class="scard"><div class="shead"><h5>ضبط PIC8 وفتح SDV4</h5><span class="sbadge">11</span></div><div class="sbd"><ol><li>نقطة تحديد PIC8 عند 41 bar، انتظار تساوي ضغط البرج.</li><li>فتح SDV4، FIC2 بنقطة تحديد 20.</li></ol></div></div><div class="scard"><div class="shead"><h5>فتح SDV3 وزيادة الأمين</h5><span class="sbadge">12</span></div><div class="sbd"><ol><li>فتح SDV3، LIC2 أوتوماتيك.</li><li>زيادة جريان الأمين 10 tn/hr كل دقيقة حتى 300.</li></ol></div></div><div class="scard"><div class="shead"><h5>تشغيل TIC3 والمبردات</h5><span class="sbadge">13</span></div><div class="sbd"><p>TIC3 أوتوماتيك، تشغيل مبردات الهواء، فتح SDV11.</p></div></div><div class="scard"><div class="shead"><h5>ضبط TIC2 وFIC5</h5><span class="sbadge">14</span></div><div class="sbd"><p>TIC2 Manual وفتحة 0%، FIC5 وضع cascade.</p></div></div><div class="scard"><div class="shead"><h5>فتح SDV12 وتشغيل FIC6</h5><span class="sbadge">15</span></div><div class="sbd"><p>فتح SDV12، FIC6 أوتوماتيك، تشغيل المضخة المجاورة.</p></div></div><div class="scard"><div class="shead"><h5>تحويل TIC2 وLIC6 وTIC1</h5><span class="sbadge">16</span></div><div class="sbd"><p>تحويل TIC2 وLIC6 وTIC1 إلى أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>فتح SDV5 وLIC3 وSDV1</h5><span class="sbadge">17</span></div><div class="sbd"><ol><li>فتح SDV5، LIC3 أوتوماتيك.</li><li>فتح SDV1، إغلاق bypass MV1.</li></ol></div></div><div class="scard"><div class="shead"><h5>زيادة التغذية وفتح SDV6</h5><span class="sbadge">18</span></div><div class="sbd"><p>زيادة معدل مادة المغذية 30 tn/hr كل دقيقة، فتح SDV6.</p></div></div><div class="scard"><div class="shead"><h5>إرجاع SIS إلى الأخضر</h5><span class="sbadge">19</span></div><div class="sbd"><p>عند استقرار الظروف، إرجاع SIS إلى اللون الأخضر.</p></div></div></div></div></article>
+<article class="exp pane" hidden="" id="g-amine-stop"><h4><svg class="i" style="width:32px;height:32px"><use href="#power"></use></svg>خطوات إيقاف وحدة الأمين</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل SIS إلى الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>تخفيض التغذية إلى 30</h5><span class="sbadge">2</span></div><div class="sbd"><p>تنزيل معدل التغذية إلى 30 tn/hr، بمعدل 20 كل دقيقة.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV1 وSDV2</h5><span class="sbadge">3</span></div><div class="sbd"><p>إغلاق صمام SDV1 وSDV2.</p></div></div><div class="scard"><div class="shead"><h5>تخفيض PIC8</h5><span class="sbadge">4</span></div><div class="sbd"><p>تنزيل PIC8 إلى 41 bar، ثم إغلاق الصمام.</p></div></div><div class="scard"><div class="shead"><h5>تخفيض جريان الأمين</h5><span class="sbadge">5</span></div><div class="sbd"><p>تنزيل جريان الأمين 10 tn/hr كل دقيقة، مع متابعة مستوى برج إعادة التنشيط.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV4</h5><span class="sbadge">6</span></div><div class="sbd"><p>إغلاق SDV4 (تصبح فتحة LIC2 صفراً).</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV3 وSDV5</h5><span class="sbadge">7</span></div><div class="sbd"><p>إغلاق صمام SDV3 وSDV5.</p></div></div><div class="scard"><div class="shead"><h5>تخفيض FIC3 وإغلاق SDV8</h5><span class="sbadge">8</span></div><div class="sbd"><p>تنزيل FIC3 إلى 1 tn/hr، إغلاق SDV8.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV9</h5><span class="sbadge">9</span></div><div class="sbd"><p>إغلاق صمام SDV9.</p></div></div><div class="scard"><div class="shead"><h5>إيقاف مضخة FIC7</h5><span class="sbadge">10</span></div><div class="sbd"><p>FIC7 Manual وفتحة 100%، إيقاف المضخة المجاورة.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV10</h5><span class="sbadge">11</span></div><div class="sbd"><p>إغلاق صمام SDV10.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق المبردات الهوائية</h5><span class="sbadge">12</span></div><div class="sbd"><p>إغلاق مبردات الهواء.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV7 وSDV11</h5><span class="sbadge">13</span></div><div class="sbd"><p>إغلاق صمام SDV7 وSDV11.</p></div></div><div class="scard"><div class="shead"><h5>إيقاف FIC6 وإغلاق SDV12</h5><span class="sbadge">14</span></div><div class="sbd"><p>FIC6 Manual وفتحة 100%، إيقاف المضخة، إغلاق SDV12.</p></div></div></div></div></article>
+<section class="pane" hidden="" id="g-lpg-goal"><h3 class="t"><svg class="i"><use href="#info"></use></svg>وحدة LPG – الهدف والفائدة</h3>
+<div class="panel"><p style="margin:0">تهدف وحدة LPG إلى فصل مكونات الغاز المسال (البروبان والبيوتان) عن الغاز الطبيعي، وذلك باستخدام سلسلة من أبراج التقطير تعتمد على اختلاف درجات غليان هذه المكونات. فائدة الوحدة أنها تنتج غاز LPG بمواصفات قياسية صالحة للاستخدام المنزلي والصناعي، وفي الوقت نفسه تحافظ على نقاء الغاز الطبيعي من السوائل الثقيلة قبل نقله أو تسييله في مراحل لاحقة.</p></div></section>
+<article class="exp pane" hidden="" id="g-lpg-start"><h4><svg class="i" style="width:32px;height:32px"><use href="#play"></use></svg>خطوات تشغيل وحدة LPG</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل SIS إلى الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>التحقق من إغلاق الصمامات</h5><span class="sbadge">2</span></div><div class="sbd"><p>التأكد من إغلاق جميع صمامات SDV وBDV لجميع الأبراج.</p></div></div><div class="scard"><div class="shead"><h5>ضبط مسيطرات TIC للمسخّنة على 0%</h5><span class="sbadge">3</span></div><div class="sbd"><p>تأكد أن مسيطرات TIC الخاصة بالمسخّنة (Reboiler) فتحة 0% لجميع الأبراج.</p></div></div><div class="scard"><div class="shead"><h5>ضبط مسيطرات FIC على Manual و100%</h5><span class="sbadge">4</span></div><div class="sbd"><p>تأكد أن مسيطرات FIC المجاورة للمضخة Manual وفتحة 100%.</p></div></div><div class="scard"><div class="shead"><h5>تشغيل المضخة ووضعها أوتوماتيك</h5><span class="sbadge">5</span></div><div class="sbd"><p>تشغيل المضخة المجاورة لـFIC، ثم تحويلها أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>تشغيل المبردات الهوائية</h5><span class="sbadge">6</span></div><div class="sbd"><p>تشغيل المبردات الهوائية لجميع الأبراج.</p></div></div><div class="scard"><div class="shead"><h5>فتح صمامات الخروج والتصدير</h5><span class="sbadge">7</span></div><div class="sbd"><p>فتح جميع صمامات SDV للخروج والتصدير لجميع الأبراج.</p></div></div><div class="scard"><div class="shead"><h5>انتظار إغلاق PCV</h5><span class="sbadge">8</span></div><div class="sbd"><p>انتظار إغلاق PCV لجميع الأبراج تلقائياً.</p></div></div><div class="scard"><div class="shead"><h5>فتح صمامات التغذية</h5><span class="sbadge">9</span></div><div class="sbd"><p>فتح صمامات مادة المغذية SDV66 وSDV67.</p></div></div><div class="scard"><div class="shead"><h5>تحويل TIC أوتوماتيكياً</h5><span class="sbadge">10</span></div><div class="sbd"><p>تحويل جميع مسيطرات TIC إلى أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>إرجاع SIS إلى الأخضر</h5><span class="sbadge">11</span></div><div class="sbd"><p>عند استقرار الوحدة، تحويل SIS إلى الأخضر.</p></div></div></div></div></article>
+<article class="exp pane" hidden="" id="g-lpg-stop"><h4><svg class="i" style="width:32px;height:32px"><use href="#power"></use></svg>خطوات إيقاف وحدة LPG</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل SIS إلى الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق صمامات التغذية</h5><span class="sbadge">2</span></div><div class="sbd"><p>إغلاق SDV66 وSDV67.</p></div></div><div class="scard"><div class="shead"><h5>إيقاف مضخة FIC11</h5><span class="sbadge">3</span></div><div class="sbd"><p>FIC11 Manual وفتحة 100%، ثم إيقاف المضخة.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV16 وTIC26</h5><span class="sbadge">4</span></div><div class="sbd"><p>بعد إغلاق LCV15، إغلاق SDV16، TIC26 Manual وفتحة 0%.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV38 وTIC39</h5><span class="sbadge">5</span></div><div class="sbd"><p>انتظار إغلاق LCV28، إغلاق SDV38، TIC39 Manual وفتحة 0%.</p></div></div><div class="scard"><div class="shead"><h5>إيقاف FIC32 وإغلاق SDV35</h5><span class="sbadge">6</span></div><div class="sbd"><p>انتظار إغلاق PCV27، FIC32 Manual وفتحة 100%، إيقاف المضخة، إغلاق SDV35.</p></div></div><div class="scard"><div class="shead"><h5>تكرار الخطوات لباقي الأبراج</h5><span class="sbadge">7</span></div><div class="sbd"><p>تُكرَّر نفس الخطوات مع اختلاف مواقع الصمامات لكل برج.</p></div></div></div></div></article>
+<section class="pane" hidden="" id="g-lng-goal"><h3 class="t"><svg class="i"><use href="#info"></use></svg>وحدة LNG – الهدف والفائدة</h3>
+<div class="panel"><p style="margin:0">تهدف وحدة LNG إلى تسييل الغاز الطبيعي بتبريده إلى درجة حرارة منخفضة جداً (نحو 162- درجة مئوية)، وذلك عبر دورات تبريد متتالية (بروبلين، إيثيلين، ميثان)، مما يقلّل حجمه بشكل كبير جداً. فائدة الوحدة أنها تجعل نقل الغاز الطبيعي وتخزينه ممكناً لمسافات بعيدة عبر الناقلات البحرية، في الحالات التي يتعذر فيها استخدام خطوط الأنابيب، مع الحفاظ على نقاوة الغاز لمنع تجمد المبادلات الحرارية.</p></div></section>
+<article class="exp pane" hidden="" id="g-lng-start"><h4><svg class="i" style="width:32px;height:32px"><use href="#play"></use></svg>خطوات تشغيل وحدة LNG</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل SIS إلى الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>تشغيل منظومة البروبلين</h5><span class="sbadge">2</span></div><div class="sbd"><ol><li>FIC96 وFIC97 Manual وفتحة 25%.</li><li>تشغيل الكابسة عبر PIC112 من 900 حتى 1800 RPM بزيادة 10% تدريجياً.</li><li>عند الاستقرار: إرجاع المسيطرات إلى أوتوماتيك.</li></ol></div></div><div class="scard"><div class="shead"><h5>تشغيل منظومة الإيثيلين وتبريد الميثان</h5><span class="sbadge">3</span></div><div class="sbd"><ol><li>مسيطرات 239 و240 و255 Manual وفتحة 25%.</li><li>تشغيل الكابسة عبر PIC87 من 3600 حتى 6000 RPM.</li><li>عند الاستقرار: إرجاع مسيطرات الجريان والحرارة 244 و245 والضغط أوتوماتيك.</li><li>تشغيل تبريد الميثان من FIC107.</li></ol></div></div><div class="scard"><div class="shead"><h5>ضبط مسيطرات Cold Box</h5><span class="sbadge">4</span></div><div class="sbd"><ol><li>جميع LIC لكل Vessel أوتوماتيك.</li><li>التأكد أن جميع PIC أوتوماتيك.</li></ol></div></div><div class="scard"><div class="shead"><h5>فتح SDV2 وزيادة التغذية</h5><span class="sbadge">5</span></div><div class="sbd"><ol><li>زيادة معدل التغذية 20 tn/hr حتى 100 tn/hr.</li><li>انتظار الضغط حتى 20 bar، ثم رفع التغذية إلى 170.</li></ol></div></div><div class="scard"><div class="shead"><h5>تهيئة برج الميثان</h5><span class="sbadge">6</span></div><div class="sbd"><p>فتح SDV100، LIC87 أوتوماتيك، فتح الصمامات، تشغيل المضخة.</p></div></div><div class="scard"><div class="shead"><h5>تهيئة LNG Export</h5><span class="sbadge">7</span></div><div class="sbd"><p>وضع PIC201 أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>ضبط TIC205 وFIC205</h5><span class="sbadge">8</span></div><div class="sbd"><p>TIC205 وضع cascade، وعند تكوّن مستوى البرج FIC205 أوتوماتيك.</p></div></div><div class="scard"><div class="shead"><h5>ضبط FIC63</h5><span class="sbadge">9</span></div><div class="sbd"><p>FIC63 Manual وفتحة 0%.</p></div></div><div class="scard"><div class="shead"><h5>تهيئة المبادلة E9</h5><span class="sbadge">10</span></div><div class="sbd"><ol><li>فتح التبريد في شاشة LNG Export.</li><li>إرجاع FIC63 أوتوماتيك وLIC63 وضع cascade.</li></ol></div></div><div class="scard"><div class="shead"><h5>تهيئة الشاشة الأولى</h5><span class="sbadge">11</span></div><div class="sbd"><ol><li>PIC11 بفتحة 25%، فتح SDV112، LIC13 أوتوماتيك.</li><li>فتح SDV22، FIC6 cascade، فتح SDV14.</li><li>عند تكوّن مستوى البرج: تشغيل المسخّنة.</li></ol></div></div></div></div></article>
+<article class="exp pane" hidden="" id="g-lng-stop"><h4><svg class="i" style="width:32px;height:32px"><use href="#power"></use></svg>خطوات إيقاف وحدة LNG</h4>
+<div class="body"><div class="steps"><div class="scard"><div class="shead"><h5>تفعيل نظام السلامة SIS</h5><span class="sbadge">1</span></div><div class="sbd"><p>تحويل SIS إلى الأحمر.</p></div></div><div class="scard"><div class="shead"><h5>فتح SDV2 وإغلاق SDV1 وSDV12</h5><span class="sbadge">2</span></div><div class="sbd"><p>فتح SDV2، إغلاق SDV1 وSDV12.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق Reboiler وSDV112</h5><span class="sbadge">3</span></div><div class="sbd"><p>FIC6 Manual وفتحة 50%، إغلاق Reboiler لبرج Predemethanizer، إغلاق SDV112.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق SDV22 وSDV14</h5><span class="sbadge">4</span></div><div class="sbd"><p>PIC11 Manual بفتحة 25%، LIC13 Manual وفتحة 0%، إغلاق SDV22 (تفريغ الـVessel)، إغلاق SDV14.</p></div></div><div class="scard"><div class="shead"><h5>تصريف PIC11</h5><span class="sbadge">5</span></div><div class="sbd"><p>عند وصول PIC11 إلى 10 bar فتح التصريف، وعند 0 bar إغلاق المسيطر.</p></div></div><div class="scard"><div class="shead"><h5>تقليل معدل التغذية</h5><span class="sbadge">6</span></div><div class="sbd"><p>تقليل معدل جريان مادة المغذية 20 tn/hr كل دقيقة.</p></div></div><div class="scard"><div class="shead"><h5>ضبط TIC205 وFIC205 يدوياً</h5><span class="sbadge">7</span></div><div class="sbd"><p>وضع TIC205 وFIC205 Manual.</p></div></div><div class="scard"><div class="shead"><h5>مراقبة فرق الضغط</h5><span class="sbadge">8</span></div><div class="sbd"><p>فرق الضغط بين PIC71 وPIC23 وPIC201 يجب أن يبقى 4 bar.</p></div></div><div class="scard"><div class="shead"><h5>عزل المبادلة E9</h5><span class="sbadge">9</span></div><div class="sbd"><p>فتح MV197، إغلاق MV195 وMV196، LIC87 Manual وفتحة 0%.</p></div></div><div class="scard"><div class="shead"><h5>تفريغ Cold Box</h5><span class="sbadge">10</span></div><div class="sbd"><p>إغلاق المضخة والصمامات، تفريغ الـVessel، جميع LIC Manual وفتحة 25%.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق تبريد الميثان والتصريف</h5><span class="sbadge">11</span></div><div class="sbd"><ol><li>عند PIC201=15 bar إغلاق تبريد الميثان.</li><li>عند PIC23 أقل من 10 bar فتح تصريف Vessel217 وبرج الميثان.</li></ol></div></div><div class="scard"><div class="shead"><h5>إغلاق مضخة LNG Export</h5><span class="sbadge">12</span></div><div class="sbd"><p>إغلاق المضخة، وإغلاق LCV117 وFIC107.</p></div></div><div class="scard"><div class="shead"><h5>إغلاق الكابستين K2 وK1</h5><span class="sbadge">13</span></div><div class="sbd"><p>إغلاق الكابسة K2، ثم الكابسة K1.</p></div></div></div></div></article>
+</main>
+</div>
+</div>
+
+<div class="lab" id="lab-t" hidden>
+<div class="layout">
+<aside aria-label="التنقل"><div class="grp">عام</div><div class="items"><button class="it on" data-t="t-p-overview"><i><svg class="i"><use href="#scope"></use></svg></i>نظرة عامة</button><button class="it" data-t="t-p-goals"><i><svg class="i"><use href="#flask"></use></svg></i>أهداف المختبر</button><button class="it" data-t="t-safety"><i><svg class="i"><use href="#shield"></use></svg></i>تعليمات السلامة</button><button class="it" data-t="t-sampling"><i><svg class="i"><use href="#tube"></use></svg></i>تعليمات النمذجة</button></div><div class="grp">التجارب</div><div class="items"><button class="it" data-t="t-e1"><i>1</i>قياس الوزن النوعي للغاز السائل بطريقة المكثاف</button><button class="it" data-t="t-e2"><i>2</i>تآكل الشريط النحاسي</button><button class="it" data-t="t-e3"><i>3</i>تعيين الضغط البخاري للغاز السائل</button><button class="it" data-t="t-e4"><i>4</i>قياس درجة الندى</button><button class="it" data-t="t-e5"><i>5</i>فحص التطايرية للغاز السائل</button></div></aside>
+<main id="main-t" style="scroll-margin-top:56px">
+<div class="guide"><svg class="i" viewBox="0 0 120 140" role="img" aria-label="الفاحصة تشرح"><path d="M14 140v-28q0-26 46-26t46 26v28z" fill="#fff" stroke="currentColor"/><path d="M48 88l12 20 12-20" fill="#F26A1B" stroke="currentColor"/><circle cx="60" cy="52" r="24" fill="#F2C9A0" stroke="currentColor"/><path d="M33 47q0-28 27-28t27 28z" fill="#F26A1B" stroke="currentColor"/><rect x="27" y="45" width="66" height="8" rx="4" fill="#F26A1B" stroke="currentColor"/><rect x="39" y="54" width="42" height="14" rx="7" fill="#DFF3FF" stroke="currentColor"/><circle cx="51" cy="61" r="2" fill="currentColor"/><circle cx="69" cy="61" r="2" fill="currentColor"/><path d="M52 76q8 6 16 0" stroke-width="2.5"/><circle cx="88" cy="112" r="6" fill="#F2C9A0" stroke="currentColor" stroke-width="2.5"/><use href="#gear" x="72" y="80" width="42" height="42" fill="#F26A1B" fill-opacity=".4" stroke-width="3.5"/></svg><div class="bub pop" id="say-t" aria-live="polite"></div></div>
+<section class="pane" id="t-p-overview"><h3 class="t"><svg class="i"><use href="#scope"></use></svg>نظرة عامة</h3>
+<div class="panel"><p style="margin:0">مختبر فحوصات الغاز في قسم التصفية بمعهد التدريب النفطي / كركوك. يضم خمسة فحوصات على الغاز السائل (LPG): الوزن النوعي، تآكل الشريط النحاسي، الضغط البخاري، درجة الندى، والتطايرية. اختر قسماً من القائمة، أو ابدأ بإحدى التجارب:</p></div>
+<div class="gos"><button class="go" data-t="t-e1"><b>1</b>قياس الوزن النوعي للغاز السائل بطريقة المكثاف</button><button class="go" data-t="t-e2"><b>2</b>تآكل الشريط النحاسي</button><button class="go" data-t="t-e3"><b>3</b>تعيين الضغط البخاري للغاز السائل</button><button class="go" data-t="t-e4"><b>4</b>قياس درجة الندى</button><button class="go" data-t="t-e5"><b>5</b>فحص التطايرية للغاز السائل</button></div></section>
+<section class="pane" hidden="" id="t-p-goals"><h3 class="t"><svg class="i"><use href="#flask"></use></svg>أهداف المختبر</h3>
+<div class="panel"><ol>
+<li>التأكد من نقاء الغاز الخارج من المحطة ومطابقته للمواصفات المطلوبة قبل بيعه أو ضخه للشبكة.</li>
+<li>متابعة عينات الغاز أثناء المعالجة ليعرف الكادر التشغيلي كيف يضبط أبراج الفصل ووحدات التنقية.</li>
+<li>الكشف المبكر عن مسببات تآكل الأنابيب والمعدات، مثل الرطوبة والغازات الحمضية، لتجنب التآكل.</li>
+</ol></div></section>
+<section class="pane" hidden="" id="t-safety">
+<h3 class="t"><svg class="i"><use href="#shield"></use></svg>تعليمات السلامة في المختبر</h3>
+<div class="panel"><ol>
+<li>ممنوع التدخين.</li>
+<li>تأكد من إطفاء كافة مصادر اللهب والكهرباء قبل مغادرة المختبر.</li>
+<li>تعرّف على مخارج الطوارئ.</li>
+<li>تعلّم استخدام المطفأة في مكافحة الحريق.</li>
+<li>حافظ على ترتيب المختبر بشكل منتظم.</li>
+<li>انقل الأسطوانات بواسطة عربات مخصصة وامتنع عن دحرجتها.</li>
+<li>استعمل حجرة سحب الغازات عند التعامل مع المواد السامة.</li>
+</ol></div>
+</section>
+<section class="pane" hidden="" id="t-sampling">
+<h3 class="t"><svg class="i"><use href="#tube"></use></svg>تعليمات النمذجة (Sampling)</h3>
+<div class="panel"><ol>
+<li>يجب الحصول على تصريح سلامة خاص بأخذ النماذج الغازية ومرافقة أحد أفراد السلامة.</li>
+<li>يجب أن تتوفر للفاحص معرفة مسبقة بطبيعة الغاز ونوعه وفكرة أولية عن مكونات الغاز المأخوذ كنموذج.</li>
+<li>يجب أن يكون الفاحص على دراية تامة بمواقع جميع نقاط أخذ النماذج في مواقع العمل.</li>
+<li>ارتداء معدات السلامة عند أخذ جميع النماذج الغازية.</li>
+<li>يجب على الفاحص تنظيف معدات أخذ النماذج قبل ملء الأسطوانة بغاز النموذج.</li>
+<li>يجب أن يكون الفاحص بعكس اتجاه الرياح عند سحب النموذج لكي لا يتعرض للغاز.</li>
+<li>التأكد من طرد الهواء من الأسطوانة لضمان جمع أكبر كمية ممكنة من النموذج.</li>
+<li>يجب التأكد من عدم وجود نضوح (تسريب) في معدات أخذ النموذج.</li>
+<li>استخدام أدوات خاصة مصنوعة من مادة النحاس.</li>
+<li>عدم التدخين وتجنب ارتداء الملابس التي تولّد الكهرباء الساكنة (كالملابس الصوفية) لمنع حدوث الشرارة.</li>
+</ol></div>
+</section>
+<article class="exp pane" hidden="" id="t-e1">
+<h4><b>1</b>قياس الوزن النوعي للغاز السائل بطريقة المكثاف<svg class="i" style="margin-inline-start:auto"><use href="#flask"></use></svg></h4>
+<div class="body">
+<h5>الهدف من التجربة</h5>
+<p>إيجاد الوزن النوعي عند الظروف القياسية بحرارة 15.6°C.</p>
+<h5>مكونات التجربة</h5>
+<ul class="chips"><li>أسطوانة غاز</li><li>النموذج (الغاز السائل)</li><li>المكثاف</li></ul>
+<h5>خطوات التجربة</h5>
+<ol>
+<li>يتم عمل تطهير للمعدة بطرد الهواء منها.</li>
+<li>يتم قلب أسطوانة الغاز حتى ينزل السائل إلى أسفل الأسطوانة ويدخل إلى المعدة كسائل.</li>
+<li>يكون صمام التنفيس مفتوحاً وفتحة خروج النموذج مغلقة، وعند خروج الغاز السائل من صمام التنفيس يتم غلقه تدريجياً.</li>
+</ol>
+</div>
+</article>
+<article class="exp pane" hidden="" id="t-e2">
+<h4><b>2</b>تآكل الشريط النحاسي<svg class="i" style="margin-inline-start:auto"><use href="#beaker"></use></svg></h4>
+<div class="body">
+<h5>الهدف من التجربة</h5>
+<p>الكشف عن المركبات الكبريتية الموجودة في الغاز السائل LPG عن طريق تآكل النحاس.</p>
+<h5>مكونات التجربة</h5>
+<ul class="chips"><li>أسطوانة الغاز</li><li>أنبوب مرن</li><li>حمام مائي</li><li>محرار</li><li>آلة تثبيت النحاس</li><li>لوحة المقارنة القياسية</li><li>كربيد السيليكون للتلميع</li></ul>
+<h5>خطوات التجربة</h5>
+<ol>
+<li>يتم وضع الماء في أسطوانة التجربة لتكوين وسط مناسب للتآكل.</li>
+<li>عمل نفس خطوات التجربة الأولى.</li>
+<li>يتم ربط توصيلة بين المكثاف وأسطوانة التجربة من الأسفل، ويجب أن يكون خروج الأسطوانة من الأعلى مفتوحاً، وعند خروج الغاز السائل من أعلى الأسطوانة نغلق الخروج والدخول.</li>
+<li>يتم فصل التوصيلة ووضعها في حمام مائي لمدة ساعة كاملة بحرارة 37.8°C، ثم نستخرج شريط النحاس ونقارنه بلوحة المقارنة للمواصفات القياسية.</li>
+</ol>
+</div>
+</article>
+<article class="exp pane" hidden="" id="t-e3">
+<h4><b>3</b>تعيين الضغط البخاري للغاز السائل<svg class="i" style="margin-inline-start:auto"><use href="#tube"></use></svg></h4>
+<div class="body">
+<h5>الهدف من التجربة</h5>
+<ol>
+<li>معرفة أعلى الضغوط عند ارتفاع الحرارة في الخزان.</li>
+<li>سلامة النقل وسدادات المبخرة في المحركات التي تعمل بالكازولين.</li>
+<li>معرفة الخسارة المتوقعة عند النقل وخزن النموذج.</li>
+</ol>
+<h5>مكونات التجربة</h5>
+<ul class="chips"><li>غرفتان أسطوانيتان منفصلتان ومرتبطتان بصورة محكمة: العليا (حيز التمدد) والسفلى (حيز السائل)</li><li>مقياس ضغط</li><li>صمام التنفيس</li><li>محرار</li></ul>
+<h5>خطوات التجربة</h5>
+<ol>
+<li>عمل خطوات التجربة الأولى.</li>
+<li>يتم ربط توصيلة بين مكثاف الضغط والغرفة السفلى.</li>
+<li>يتم فتح الصمام الأحمر حتى يخرج الغاز السائل، وعند خروجه نغلق الصمام الأحمر.</li>
+<li>نربط الغرفة العليا مع الغرفة السفلى ثم نفتح الصمام الأحمر ويكون صمام التنفيس مفتوحاً للسماح بتمدد الغاز السائل، وعند خروج الغاز السائل نغلق صمام التنفيس.</li>
+<li>نرجّ المعدة كل 5 دقائق ونأخذ قراءة الضغط.</li>
+</ol>
+</div>
+</article>
+<article class="exp pane" hidden="" id="t-e4">
+<h4><b>4</b>قياس درجة الندى<svg class="i" style="margin-inline-start:auto"><use href="#flask"></use></svg></h4>
+<div class="body">
+<h5>الهدف من التجربة</h5>
+<p>تحديد كمية الماء في الغازات للحد من المشاكل التي تسببها الرطوبة.</p>
+<h5>مكونات التجربة</h5>
+<ul class="chips"><li>غرفة ضغط مغلقة</li><li>صمام سيطرة تدفق</li><li>شباك بلاستيكي</li><li>المرآة</li><li>مقياس الضغط</li><li>الحامل الثلاثي</li><li>المبرّد</li></ul>
+<h5>خطوات التجربة</h5>
+<ol>
+<li>نربط التوصيلات بين خروج الغاز من الأسطوانة ودخول جهاز درجة الندى.</li>
+<li>نربط توصيلات بين خروج الغاز من الأسطوانة ودخول المبرّد.</li>
+<li>نفتح الغاز إلى جهاز درجة الندى ثم إلى المبرّد، ثم نقيس الحرارة بواسطة المحرار.</li>
+</ol>
+</div>
+</article>
+<article class="exp pane" hidden="" id="t-e5">
+<h4><b>5</b>فحص التطايرية للغاز السائل<svg class="i" style="margin-inline-start:auto"><use href="#beaker"></use></svg></h4>
+<div class="body">
+<h5>الهدف من التجربة</h5>
+<ol>
+<li>تقدير كمية مكونات الغاز السائل ذات درجة الغليان الأعلى من درجة غليان الجزء الرئيسي من النموذج.</li>
+<li>معرفة هل هناك مواد ثقيلة في الغاز السائل.</li>
+<li>السيطرة على الكمية المتبقية بعد التبخر، إذ تمثل أهمية كبيرة للأجهزة التي تستعمل الوقود السائل.</li>
+<li>معرفة كمية البيوتان في البروبان والبنتان في البيوتان.</li>
+</ol>
+<h5>مكونات التجربة</h5>
+<ul class="chips"><li>أنبوب التطاير</li><li>محرار</li><li>ملف تبريد من النحاس</li><li>مادة تبريد درجة غليانها أدنى من غليان النموذج</li><li>ورقة ترشيح</li><li>ماسك</li><li>ماصة</li></ul>
+<h5>خطوات التجربة</h5>
+<ol>
+<li>نملأ أنبوب التطاير بـ 100 ml من النموذج.</li>
+<li>نقيس درجة الحرارة بواسطة المحرار مع متابعة الوقت.</li>
+</ol>
+</div>
+</article>
+</main>
+</div>
+</div>
+
+<footer>معهد التدريب النفطي – كركوك / قسم التصفية</footer>
+<script>
+const TALK = {"u-p-overview": "هلا بيك بمختبر وحدات التشغيلية! هذا المختبر فيه أربعة أجهزة تدريبية تحاكي وحدات المعمل الحقيقية. اختار قسم من القائمة وأشرحلك ياه.", "u-p-goals": "هذا المختبر يدرّبك على أربع عمليات أساسية: التقطير، والامتصاص والنزع، والاستخلاص، والامتزاز، بالإضافة إلى مهارة تهيئة وتشغيل وإيقاف الأجهزة بأمان.", "u-safety": "قبل أي تشغيل، لازم تكون بحضور المشرف وتتبع تسلسل الخطوات بدقة. وعند الإيقاف، اتبع التسلسل بالعكس حتى ما يصير عطل بالجهاز.", "u-e1": "جهاز التقطير المستمر يفصل مزيج سائل إلى مكوناته حسب اختلاف درجات الغليان. نهيّئ الجهاز بضغط 1.5 bar، ونشغّل المضخة ثم المسخنة، وننتظر وصول الحرارة لـ76°C قبل ما نفتح صمام الراجع.", "u-e2": "جهاز الامتصاص والنزع يقيس فرق الضغط بالظروف التشغيلية ويختبر تعرية الأمونيا من محلول هيدروكسيد الأمونيوم. نضبط الهواء والأمونيا بالحلقتين الأولى والثانية، وبعدها نشغّل المضخة.", "u-e3": "جهاز الاستخلاص يفصل الحامض عن مزيج سائل باستخدام مذيب. نحدد نسبة المذيب 60% والمزيج 40%، ونشغّل الخلاط والمضخة حسب وجود سائل بالبرج من عدمه.", "u-e4": "جهاز الامتزاز يفصل ثنائي أوكسيد الكربون عن الهواء باستعمال الكربون الفعال، عن طريق ثلاث مبادلات حرارية (مبردة، مكثفة، وكربون فعال) ووعائي تجميع.", "g-p-overview": "هلا بيك! هذا دليل تشغيل وإيقاف وحدة الأمين ووحدة LPG ووحدة LNG. اختر وحدة من القائمة وابدأ.", "g-amine-goal": "وحدة الأمين تزيل الغازات الحامضية من الغاز عن طريق الامتصاص بمحلول الأمين، لحماية المعدات من التآكل وضمان مطابقة الغاز للمواصفات.", "g-amine-start": "اتبع خطوات التشغيل بالتسلسل، وتأكد من كل خطوة قبل الانتقال للخطوة التالية.", "g-amine-stop": "الإيقاف يكون بالتدرج وبعكس أولويات التشغيل، مع مراقبة المستويات والضغوط أول بأول.", "g-lpg-goal": "وحدة LPG تفصل البروبان والبيوتان عن الغاز الطبيعي بأبراج التقطير، لإنتاج غاز مسال مطابق للمواصفات.", "g-lpg-start": "اتبع خطوات تشغيل وحدة LPG بالتسلسل، وتأكد من استقرار كل برج قبل الانتقال للخطوة التالية.", "g-lpg-stop": "إيقاف الأبراج يتكرر بنفس الطريقة لكل برج، فقط تختلف أرقام الصمامات.", "g-lng-goal": "وحدة LNG تسيّل الغاز الطبيعي بالتبريد الشديد عبر دورات بروبلين وإيثيلين وميثان، لتسهيل نقله بحراً.", "g-lng-start": "تشغيل LNG يمر بعدة منظومات تبريد متتالية، ابدأ بالبروبلين ثم الإيثيلين ثم الميثان بالتسلسل.", "g-lng-stop": "إيقاف LNG يكون تدريجياً مع مراقبة فروق الضغوط بين الشاشات وتفريغ الأوعية بأمان.", "t-p-overview": "هلا بيك! أني مساعدك بمختبر فحوصات الغاز. اختار قسم من القائمة وأشرحلك ياه، أو ابدأ من التجربة الأولى.", "t-p-goals": "المختبر يتأكد أن الغاز الخارج من المحطة نقي ومطابق للمواصفات، ويتابع العينات أثناء المعالجة، ويكشف مبكراً أسباب التآكل مثل الرطوبة والغازات الحمضية.", "t-safety": "السلامة أول شي! ممنوع التدخين، تعرّف على مخارج الطوارئ وطريقة استخدام المطفأة، وانقل الأسطوانات بعربات مخصصة وما تدحرجها.", "t-sampling": "قبل ما تأخذ نموذج: خذ تصريح سلامة ولازم يرافقك فرد سلامة، والبس معدات الوقاية، وقف بعكس اتجاه الرياح، وتأكد ما في نضوح بالمعدات.", "t-e1": "تعتمد هذه الطريقة على مبدأ أرخميدس للطفو بوضع المكثاف الزجاجي داخل أسطوانة ضغط شفافة تمنع تطاير الغاز السائل وتثبت ضغطه البخاري. يُحدد الوزن النوعي مباشرة من قراءة مستوى طفو المكثاف في السائل مع تسجيل درجة الحرارة، ثم تُصحح القراءة بجداول التصحيح القياسية للوصول إلى الوزن النوعي عند 15.6°C.", "t-e2": "تعتمد طريقة اختبار تآكل الشريط النحاسي للغاز السائل (LPG) على قياس مدى وجود المركبات الكبريتية النشطة (مثل كبريتيد الهيدروجين H₂S والميركابتانات الحرّة) التي تسبب تآكل المعادن.", "t-e3": "يعتمد الأساس النظري لقياس الضغط البخاري للغاز السائل (LPG) على مبدأ التوازن بين الطورين السائل والبخاري للمركبات الهيدروكربونية داخل حيز مغلق ومحدد.", "t-e4": "يعتمد الأساس النظري لقياس نقطة الندى (Dew Point) للغاز السائل على تحديد درجة الحرارة التي يبدأ عندها البخار بالتكثف والتحول إلى أول قطرة سائل عند ضغط معين، مما يعكس نسبة الرطوبة أو الهيدروكربونات الثقيلة فيه.", "t-e5": "يعتمد الأساس النظري لفحص التطايرية (Volatility) للغاز السائل (LPG) على قياس درجة الحرارة التي يتبخر عندها 95% من حجم العينة عند الضغط الجوي المعتاد، للتحقق من خلو الغاز من المركبات الهيدروكربونية الثقيلة وتقييم سلوك التبخر للوقود."};
+function activateLab(lab, resetToDefault){
+  document.querySelectorAll('.lab').forEach(l=>{l.hidden = l.id !== 'lab-'+lab;});
+  document.querySelectorAll('.tb').forEach(t=>{
+    const on = t.dataset.lab === lab;
+    t.classList.toggle('on', on);
+    if(on) t.setAttribute('aria-current','page'); else t.removeAttribute('aria-current');
+  });
+  if(resetToDefault && lab !== 'h'){
+    const first = document.querySelector('#lab-'+lab+' .pane');
+    if(first) show(first.id, false);
+  }
+}
+function show(id, scroll){
+  const lab = id.split('-')[0];
+  const root = document.getElementById('lab-'+lab);
+  if(!root) return;
+  root.querySelectorAll('.pane').forEach(p=>{p.hidden = p.id !== id;});
+  root.querySelectorAll('[data-t]').forEach(b=>{
+    const on = b.dataset.t === id;
+    b.classList.toggle('on', on);
+    if(on) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
+  });
+  const say = document.getElementById('say-'+lab);
+  if(say){
+    say.textContent = TALK[id] || '';
+    say.classList.remove('pop'); void say.offsetWidth; say.classList.add('pop');
+  }
+  if(scroll){
+    const main = document.getElementById('main-'+lab);
+    if(main) main.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+document.addEventListener('click', e=>{
+  const tab = e.target.closest('.tb[data-lab]');
+  if(tab){ activateLab(tab.dataset.lab, true); return; }
+  const card = e.target.closest('[data-go-lab]');
+  if(card){ activateLab(card.dataset.goLab, true); return; }
+  const b = e.target.closest('[data-t]');
+  if(b){ show(b.dataset.t, true); return; }
+});
+activateLab('h', false);
+show('u-p-overview', false);
+show('g-p-overview', false);
+show('t-p-overview', false);
+</script></body></html>
